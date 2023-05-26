@@ -14,7 +14,7 @@ const initCreatePromise = event => {
     const currentDelay = delay + (i - 1) * step;
     createPromise(i, currentDelay)
       .then(({ position, delay }) => {
-        Notify.warning(`✅ Fulfilled promise ${position} in ${delay}ms`);
+        Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
       .catch(({ position, delay }) => {
         Notify.warning(`❌ Rejected promise ${position} in ${delay}ms`);
